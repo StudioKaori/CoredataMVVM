@@ -44,6 +44,13 @@ class CoreDataViewModel: ObservableObject {
     saveData()
   } // END: addFruit
   
+  func updateFruit(entity: FruitEntity) {
+    let currentName = entity.name ?? ""
+    let newName = currentName + "!"
+    entity.name = newName
+    saveData()
+  }
+  
   func deleteFruit(indexSet: IndexSet) {
     // take out the index from the indexSet, it's optional type needs to be unwrapped
     guard let index = indexSet.first else { return }
@@ -96,8 +103,12 @@ struct CoredataBootcamp: View {
         List {
           ForEach(vm.savedEntities) { entity in
             Text(entity.name ?? "NO NAME")
+              .onTapGesture {
+                // TapGesture in foreach list will pass 'entity: FruitEntity'
+                vm.updateFruit(entity: entity)
+              }
           }
-          // You can ommit indexSet in the parametor
+          // You can ommit indexSet in the parametor, indexSet will be passed automatically
           .onDelete(perform: vm.deleteFruit)
         }
         .listStyle(PlainListStyle())
