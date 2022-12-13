@@ -59,9 +59,42 @@ class CoreDataViewModel: ObservableObject {
 struct CoredataBootcamp: View {
   
   @StateObject var vm = CoreDataViewModel()
+  @State var textFieldText: String = ""
   
   var body: some View {
-    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    NavigationView {
+      VStack(spacing: 20) {
+        TextField("Add fruit here...", text: $textFieldText)
+          .font(.headline)
+          .padding(.leading)
+          .frame(height: 55)
+          .background(.gray)
+          .cornerRadius(10)
+        
+        Button {
+          guard !textFieldText.isEmpty else { return }
+          vm.addFruit(text: textFieldText)
+          textFieldText = ""
+        } label: {
+          Text("Save")
+            .font(.headline)
+            .foregroundColor(.white)
+            .frame(height: 55)
+            .frame(maxWidth: .infinity)
+            .background(.pink)
+            .cornerRadius(10)
+        }
+
+        List {
+          ForEach(vm.savedEntities) { entity in
+            Text(entity.name ?? "NO NAME")
+          }
+        }
+        .listStyle(PlainListStyle())
+      }
+      .padding(.horizontal)
+      .navigationTitle("Fruits")
+    }
   }
 }
 
