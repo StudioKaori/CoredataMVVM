@@ -13,6 +13,7 @@
 		435F3F882948782300099512 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435F3F872948782300099512 /* Preview Assets.xcassets */; };
 		435F3F8A2948782300099512 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F3F892948782300099512 /* Persistence.swift */; };
 		435F3F8D2948782300099512 /* CoredataMVVM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 435F3F8B2948782300099512 /* CoredataMVVM.xcdatamodeld */; };
+		435F3F942948787500099512 /* CoredataBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F3F932948787500099512 /* CoredataBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		435F3F872948782300099512 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		435F3F892948782300099512 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		435F3F8C2948782300099512 /* CoredataMVVM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoredataMVVM.xcdatamodel; sourceTree = "<group>"; };
+		435F3F932948787500099512 /* CoredataBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				435F3F802948782200099512 /* CoredataMVVMApp.swift */,
 				435F3F822948782200099512 /* ContentView.swift */,
+				435F3F932948787500099512 /* CoredataBootcamp.swift */,
 				435F3F842948782300099512 /* Assets.xcassets */,
 				435F3F892948782300099512 /* Persistence.swift */,
 				435F3F8B2948782300099512 /* CoredataMVVM.xcdatamodeld */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				435F3F8A2948782300099512 /* Persistence.swift in Sources */,
+				435F3F942948787500099512 /* CoredataBootcamp.swift in Sources */,
 				435F3F832948782200099512 /* ContentView.swift in Sources */,
 				435F3F8D2948782300099512 /* CoredataMVVM.xcdatamodeld in Sources */,
 				435F3F812948782200099512 /* CoredataMVVMApp.swift in Sources */,
