@@ -14,6 +14,7 @@
 		435F3F8A2948782300099512 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F3F892948782300099512 /* Persistence.swift */; };
 		435F3F8D2948782300099512 /* CoredataMVVM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 435F3F8B2948782300099512 /* CoredataMVVM.xcdatamodeld */; };
 		435F3F942948787500099512 /* CoredataBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F3F932948787500099512 /* CoredataBootcamp.swift */; };
+		435F3F9729487A8F00099512 /* FruitsContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 435F3F9529487A8F00099512 /* FruitsContainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		435F3F892948782300099512 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		435F3F8C2948782300099512 /* CoredataMVVM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoredataMVVM.xcdatamodel; sourceTree = "<group>"; };
 		435F3F932948787500099512 /* CoredataBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataBootcamp.swift; sourceTree = "<group>"; };
+		435F3F9629487A8F00099512 /* FruitsContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FruitsContainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				435F3F802948782200099512 /* CoredataMVVMApp.swift */,
 				435F3F822948782200099512 /* ContentView.swift */,
 				435F3F932948787500099512 /* CoredataBootcamp.swift */,
+				435F3F9529487A8F00099512 /* FruitsContainer.xcdatamodeld */,
 				435F3F842948782300099512 /* Assets.xcassets */,
 				435F3F892948782300099512 /* Persistence.swift */,
 				435F3F8B2948782300099512 /* CoredataMVVM.xcdatamodeld */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				435F3F9729487A8F00099512 /* FruitsContainer.xcdatamodeld in Sources */,
 				435F3F8A2948782300099512 /* Persistence.swift in Sources */,
 				435F3F942948787500099512 /* CoredataBootcamp.swift in Sources */,
 				435F3F832948782200099512 /* ContentView.swift in Sources */,
@@ -360,6 +364,16 @@
 			);
 			currentVersion = 435F3F8C2948782300099512 /* CoredataMVVM.xcdatamodel */;
 			path = CoredataMVVM.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		435F3F9529487A8F00099512 /* FruitsContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				435F3F9629487A8F00099512 /* FruitsContainer.xcdatamodel */,
+			);
+			currentVersion = 435F3F9629487A8F00099512 /* FruitsContainer.xcdatamodel */;
+			path = FruitsContainer.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
