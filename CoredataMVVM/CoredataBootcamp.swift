@@ -16,16 +16,14 @@ class CoreDataViewModel: ObservableObject {
   init() {
     // Set up the container, name should be the same as container file
     container = NSPersistentContainer(name: "FruitsContainer")
-    
     container.loadPersistentStores { description, error in
       
       // If the error occurs, print it
       if let error = error {
         print("Error loading core data: \(error)")
-      } else {
-        print("Successfully loaded core data!")
       }
     }
+    fetchFruits()
   } // END: init
   
   func fetchFruits() {
@@ -38,7 +36,24 @@ class CoreDataViewModel: ObservableObject {
     } catch let error {
       print("Error fetching: \(error)")
     }
-  }
+  } // END: fetchFruits
+  
+  func addFruit(text: String) {
+    let newFruit = FruitEntity(context: container.viewContext)
+    newFruit.name = text
+    saveData()
+  } // END: addFruit
+  
+  func saveData() {
+    do {
+      try container.viewContext.save()
+      // to refresh the view, we need to republish @Published var savedEntities.
+      // For that, call fetchFruits after the saving.
+      fetchFruits()
+    } catch let error {
+      print("Error saving: \(error)")
+    }
+  } // END: saveData
 }
 
 struct CoredataBootcamp: View {
