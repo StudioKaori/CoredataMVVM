@@ -44,6 +44,14 @@ class CoreDataViewModel: ObservableObject {
     saveData()
   } // END: addFruit
   
+  func deleteFruit(indexSet: IndexSet) {
+    // take out the index from the indexSet, it's optional type needs to be unwrapped
+    guard let index = indexSet.first else { return }
+    let entity = savedEntities[index]
+    container.viewContext.delete(entity)
+    saveData()
+  } // END: deleteFruit
+  
   func saveData() {
     do {
       try container.viewContext.save()
@@ -89,6 +97,8 @@ struct CoredataBootcamp: View {
           ForEach(vm.savedEntities) { entity in
             Text(entity.name ?? "NO NAME")
           }
+          // You can ommit indexSet in the parametor
+          .onDelete(perform: vm.deleteFruit)
         }
         .listStyle(PlainListStyle())
       }
